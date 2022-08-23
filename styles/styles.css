@@ -2,15 +2,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&family=Rubik+Maze&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200');
 
-*{
-
-    margin: 0;
-}
-body{
-    width: 100%;
-    overflow: hidden;
-}
-
 header{
     width: 100%;
     height: 100px;
@@ -19,6 +10,7 @@ header{
     display: flex;
     padding-right: 50px;
     padding-left: 50px;
+    overflow: hidden;
 }
 /*Header Logo*/
 .logoprincipal{
@@ -38,7 +30,7 @@ header{
 }
 /*Header Opciones*/
 ul.navbar{
-    font-family: Roboto;
+    font-family: "Roboto", sans-serif;
     font-size: 20px;
     list-style: none;
     display: flex;
@@ -84,8 +76,6 @@ label:hover{
 
 /*Responsive*/
 @media (min-width: 768px) and (max-width: 1366px) {
-    
-    
     label.icon-menu{
         display: block;
     }
@@ -166,12 +156,13 @@ label:hover{
     }
 }
 
-.slider{
+/*SLIDER*/
+.barra-presentacion{
+    overflow: hidden;
     width: 100%;
     height: 85vh;
-    margin:auto;
-    overflow: hidden;
 }
+/*IMAGENES*/
 .imgslider{
     width: 100%;
     height: 100%;
@@ -216,6 +207,7 @@ label:hover{
         height: 400px;
     }
 }
+/*TEXTO-SLIDER*/
 .titulo{
     font-family: 'Rubik Maze', sans-serif;
     color: black;
@@ -223,7 +215,7 @@ label:hover{
     -webkit-text-stroke: 3px rgba(0,0,0);
 }
 .contenedor-texto{
-    margin-top: -600px;
+    margin-top: -1200px;
     margin-left: 35px;
 }
 @media (min-width:500px) and (max-width: 768px){
@@ -249,4 +241,73 @@ label:hover{
     .contenedor-texto{
         margin-top: -360px;
     }
+}
+
+/*DESCUENTOS*/
+.subtitulo{
+    margin-top: 50px;
+    margin-left: 150px;
+    display: inline-block;
+    padding: 20px 25px;
+    border-radius: 60px;
+    background-color: black;
+}
+.subtitulo h2{
+    font-size: 45px;
+    font-family: "Monserrat", sans-serif;
+    color: #ffc107;
+    display: inline;
+}
+.barra-descuentos{
+    width: 100%;
+    padding-right:80px;
+    padding-left: 80px;
+    display: flex;
+    margin-top: 50px;
+}
+.descuento{
+    width: 300px;
+    height: 500px;
+    border-radius: 15px;
+    margin-left: 100px;
+    background-color: black;
+    
+}
+.img-descuento{
+    width: 300px;
+    height: 300px;
+    background-color: #ffc107;
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+    position: relative;
+    overflow: hidden;
+}
+.cuadro-img-descuento{
+    width:300px;
+    height:300px;
+}
+.texto-descuento{
+    padding: 15px 15px;
+}
+.texto-descuento p{
+    color:white;
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    background-color: red;
+
+}
+p.dsc{
+    position: absolute;
+    width: 200px;
+    height: 30px;
+    top: 225px;
+    right: -50px;
+
+    color:white;
+    font-family: "Roboto", sans-serif;
+    font-size: 15px;
+    background-color: red;
+
+    text-align: center;
+    transform: rotate(-50deg);
 }
