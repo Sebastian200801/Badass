@@ -116,7 +116,7 @@ label:hover {
   .header_busqueda {
     position: fixed;
     top: 100px;
-    left: 0;
+    left: 100%;
     z-index: 10;
     width: 100%;
     padding-right: 30px;
@@ -128,7 +128,7 @@ label:hover {
   .header_cuenta {
     position: fixed;
     top: 200px;
-    left: 0;
+    left: 100%;
     z-index: 10;
     width: 100%;
     background-color: black;
@@ -139,7 +139,7 @@ label:hover {
   ul.navbar {
     position: fixed;
     top: 300px;
-    left: 0;
+    left: 100%;
     z-index: 10;
     width: 100%;
     flex-direction: column;
@@ -157,7 +157,7 @@ label:hover {
   #btn-menu:checked ~ .header_busqueda,
   #btn-menu:checked ~ .navbar,
   #btn-menu:checked ~ .header_cuenta {
-    left: 100%;
+    left: 0;
   }
 }
 
