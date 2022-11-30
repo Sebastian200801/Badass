@@ -11,39 +11,102 @@
   width: 100%;
   height: 100px;
   background-color: black;
-  justify-content: space-between;
 }
 .nav {
   display: flex;
   justify-content: space-between;
+  font-family: "Roboto", sans-serif;
 }
+
 /*Header Logo*/
 .header_logo {
   width: 100px;
-  height: 100px;
+  height: 100%;
   margin-left: 5%;
 }
 .logoprincipal {
-  width: 100%;
-  height: 100%;
+  width: 100px;
+  height: 100px;
 }
 /*Header Busqueda*/
-.header_busqueda {
+.cap {
   width: 35%;
   height: 100px;
+}
+.header_busqueda {
+  width: 100%;
+  height: 50px;
   display: flex;
-  padding-top: 25px;
-  padding-bottom: 25px;
+  margin-top: 10px;
 }
 .boton-correcion {
   padding-top: 10px;
+}
+#btn-categoria {
+  display: none;
+}
+
+.category {
+  width: 100%;
+  height: 40px;
+  display: flex;
+  padding-top: 7px;
+  padding-left: 3%;
+  font-size: 17px;
+  color: #ffc107;
+}
+label.bar-inf {
+}
+
+.category:hover {
+  text-decoration: underline;
+  text-decoration-color: #ffc107;
+}
+/*List Categoria*/
+ul.list-categoria {
+  margin: 0;
+  padding: 0;
+  position: fixed;
+  top: -100%;
+  left: 330px;
+  flex-direction: column;
+  z-index: -10;
+  width: 50%;
+  background-color: black;
+  transition: top 1s;
+  list-style: none;
+}
+.list-categoria li {
+  border-bottom: 1px solid #ffc107;
+  width: 100%;
+}
+.list-categoria li a {
+  text-decoration: none;
+  display: block;
+  padding: 15px 20px;
+  color: #ffc107;
+  text-align: left;
+}
+#btn-categoria:checked ~ .list-categoria {
+  top: 10%;
+}
+.list-categoria li a:hover {
+  background-color: #ffc107;
+  color: black;
+}
+p.p-inf {
+  display: inline-block;
+  background-color: green;
+}
+span.log-com {
+  display: inline-block;
+  background-color: red;
 }
 /*Header Opciones*/
 ul.navbar {
   display: flex;
   margin: 0;
   padding: 0;
-  font-family: "Roboto", sans-serif;
   font-size: 20px;
   list-style: none;
 }
@@ -65,15 +128,14 @@ ul.navbar {
   display: flex;
 }
 /*Header Menu*/
-label {
-  height: 100px;
+label.bar-sup {
   padding: 35px 20px;
   color: #ffc107;
 }
 label.icon-menu {
   display: none;
 }
-label:hover {
+label.bar-sup:hover {
   cursor: pointer;
   background-color: #ffc107;
   color: black;
@@ -87,6 +149,28 @@ label:hover {
   label.icon-menu {
     display: block;
   }
+  ul.list-categoria {
+    position: fixed;
+    top: 100px;
+    left: 100%;
+    flex-direction: column;
+    z-index: 10;
+    width: 50%;
+    background-color: black;
+    transition: left 1s;
+  }
+  .list-categoria li {
+    border-right: 0px;
+    border-bottom: 1px solid #ffc107;
+    width: 100%;
+  }
+  .list-categoria li a {
+    text-align: center;
+  }
+  #btn-menu:checked ~ .list-categoria {
+    left: 50%;
+  }
+  /*Lista Categoria*/
   ul.navbar {
     position: fixed;
     top: 100px;
@@ -147,9 +231,9 @@ label:hover {
     transition: all 1s;
   }
   .navbar li {
+    width: 100%;
     border-right: 0px;
     border-bottom: 1px solid #ffc107;
-    width: 100%;
   }
   .navbar li a {
     text-align: center;
@@ -166,7 +250,7 @@ label:hover {
   position: relative;
   display: block;
   width: 100%;
-  height: 85vh;
+  height: 95vh;
   margin-top: 100px;
   margin-bottom: 50px;
   overflow: hidden;
@@ -177,9 +261,9 @@ label:hover {
   height: 100%;
 }
 .slider ul {
-  padding: 0;
   display: flex;
   width: 500%;
+  padding: 0;
   animation: cambio 20s infinite;
   animation-timing-function: ease-out;
 }
@@ -225,17 +309,6 @@ label:hover {
   }
 }
 
-@media (min-width: 768px) and (max-width: 1366px) {
-  .slider {
-    height: 600px;
-  }
-}
-
-@media (max-width: 768px) {
-  .slider {
-    height: 400px;
-  }
-}
 /*TEXTO-SLIDER*/
 .titulo {
   position: absolute;
@@ -244,7 +317,7 @@ label:hover {
   padding-left: 5%;
   font-family: "Rubik Maze", sans-serif;
   color: black;
-  font-size: 200px;
+  font-size: 10em;
   -webkit-text-stroke: 3px rgba(0, 0, 0);
 }
 
